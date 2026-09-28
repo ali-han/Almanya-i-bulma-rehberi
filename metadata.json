@@ -1,0 +1,6 @@
+{
+  "name": "Almanya'da İş Bulma Rehberi",
+  "description": "Almanya'da aracı firma olmadan iş bulma rehberi, 2024 nitelikli göç yasası detayları, Almanca CV ve motivasyon mektubu şablonu, güvenilir iş arama siteleri ve günlük başvuru kontrol listesi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

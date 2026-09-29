@@ -188,11 +188,11 @@ ${formData.fullName}`;
               </h3>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
               <div className="flex bg-slate-800 p-1 rounded-xl border border-slate-700">
                 <button
                   onClick={() => setActiveTab('preview')}
-                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
                     activeTab === 'preview' ? 'bg-blue-600 text-white' : 'text-slate-300 hover:text-white'
                   }`}
                 >
@@ -201,7 +201,7 @@ ${formData.fullName}`;
                 </button>
                 <button
                   onClick={() => setActiveTab('edit')}
-                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
                     activeTab === 'edit' ? 'bg-blue-600 text-white' : 'text-slate-300 hover:text-white'
                   }`}
                 >
@@ -212,7 +212,7 @@ ${formData.fullName}`;
 
               <button
                 onClick={handleCopy}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all cursor-pointer shadow-sm"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all cursor-pointer shadow-sm whitespace-nowrap"
               >
                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{copied ? 'Kopyalandı!' : 'Mektubu Kopyala'}</span>
@@ -229,7 +229,7 @@ ${formData.fullName}`;
                   type="text"
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                  className="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-white focus:outline-blue-500"
+                  className="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-white focus:outline-none focus:ring-1 focus:ring-blue-500"
                 />
               </div>
 
@@ -239,7 +239,7 @@ ${formData.fullName}`;
                   type="text"
                   value={formData.contactInfo}
                   onChange={(e) => setFormData({ ...formData, contactInfo: e.target.value })}
-                  className="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-white focus:outline-blue-500"
+                  className="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-white focus:outline-none focus:ring-1 focus:ring-blue-500"
                 />
               </div>
 
@@ -249,7 +249,7 @@ ${formData.fullName}`;
                   type="text"
                   value={formData.position}
                   onChange={(e) => setFormData({ ...formData, position: e.target.value })}
-                  className="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-white focus:outline-blue-500"
+                  className="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-white focus:outline-none focus:ring-1 focus:ring-blue-500"
                 />
               </div>
 
@@ -259,7 +259,7 @@ ${formData.fullName}`;
                   type="text"
                   value={formData.companyName}
                   onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
-                  className="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-white focus:outline-blue-500"
+                  className="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-white focus:outline-none focus:ring-1 focus:ring-blue-500"
                 />
               </div>
 
@@ -269,7 +269,7 @@ ${formData.fullName}`;
                   type="text"
                   value={formData.companyAddress}
                   onChange={(e) => setFormData({ ...formData, companyAddress: e.target.value })}
-                  className="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-white focus:outline-blue-500"
+                  className="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-white focus:outline-none focus:ring-1 focus:ring-blue-500"
                 />
               </div>
 
@@ -279,7 +279,7 @@ ${formData.fullName}`;
                   type="text"
                   value={formData.platform}
                   onChange={(e) => setFormData({ ...formData, platform: e.target.value })}
-                  className="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-white focus:outline-blue-500"
+                  className="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-white focus:outline-none focus:ring-1 focus:ring-blue-500"
                 />
               </div>
 
@@ -289,7 +289,7 @@ ${formData.fullName}`;
                   type="text"
                   value={formData.professionField}
                   onChange={(e) => setFormData({ ...formData, professionField: e.target.value })}
-                  className="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-white focus:outline-blue-500"
+                  className="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-white focus:outline-none focus:ring-1 focus:ring-blue-500"
                 />
               </div>
 
@@ -299,35 +299,35 @@ ${formData.fullName}`;
                   type="text"
                   value={formData.germanLevel}
                   onChange={(e) => setFormData({ ...formData, germanLevel: e.target.value })}
-                  className="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-white focus:outline-blue-500"
+                  className="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-white focus:outline-none focus:ring-1 focus:ring-blue-500"
                 />
               </div>
             </div>
           )}
 
           {/* Letter Document Preview (German DIN 5008 style) */}
-          <div className="mt-6 bg-white text-slate-900 rounded-2xl p-6 sm:p-10 shadow-2xl font-sans border border-slate-300 select-all">
+          <div className="mt-6 bg-white text-slate-900 rounded-2xl p-4 sm:p-8 md:p-10 shadow-2xl font-sans border border-slate-300 select-all w-full overflow-hidden">
             
             {/* Header info */}
-            <div className="flex flex-col sm:flex-row justify-between text-xs text-slate-500 pb-4 border-b border-slate-200">
-              <div>
+            <div className="flex flex-col sm:flex-row justify-between text-xs text-slate-500 pb-4 border-b border-slate-200 gap-2">
+              <div className="break-words">
                 <div className="font-bold text-slate-900 text-sm">{formData.fullName}</div>
-                <div>{formData.contactInfo}</div>
+                <div className="break-words">{formData.contactInfo}</div>
               </div>
-              <div className="mt-2 sm:mt-0 font-medium text-slate-600">
+              <div className="font-medium text-slate-600 sm:text-right whitespace-nowrap">
                 {formData.date}
               </div>
             </div>
 
             {/* Recipient */}
-            <div className="mt-6 text-xs text-slate-700 space-y-0.5">
+            <div className="mt-6 text-xs text-slate-700 space-y-0.5 break-words">
               <div className="font-bold text-slate-900">{formData.companyName}</div>
               <div>{formData.department}</div>
               <div>{formData.companyAddress}</div>
             </div>
 
             {/* Subject Line */}
-            <div className="mt-6 text-sm sm:text-base font-bold text-slate-900 pb-2">
+            <div className="mt-6 text-sm sm:text-base font-bold text-slate-900 pb-2 break-words">
               Bewerbung als {formData.position}
             </div>
 
@@ -337,25 +337,25 @@ ${formData.fullName}`;
             </div>
 
             {/* Body */}
-            <div className="mt-4 space-y-3.5 text-xs sm:text-sm text-slate-700 leading-relaxed text-justify">
-              <p>
+            <div className="mt-4 space-y-3.5 text-xs sm:text-sm text-slate-700 leading-relaxed text-left">
+              <p className="break-words [overflow-wrap:anywhere]">
                 mit großem Interesse habe ich Ihre Stellenanzeige auf <span className="font-semibold text-slate-900">{formData.platform}</span> gelesen. Hiermit bewerbe ich mich um die Position als <span className="font-semibold text-slate-900">{formData.position}</span> in Ihrem Unternehmen.
               </p>
 
-              <p>
+              <p className="break-words [overflow-wrap:anywhere]">
                 Ich lebe derzeit in der Türkei und verfüge über Berufserfahrung im Bereich <span className="font-semibold text-slate-900">{formData.professionField}</span>. Ich arbeite zuverlässig, lerne schnell und bin motiviert, mich in einem neuen Team einzubringen.
               </p>
 
-              <p>
+              <p className="break-words [overflow-wrap:anywhere]">
                 Meine Deutschkenntnisse liegen auf dem Niveau <span className="font-semibold text-slate-900">{formData.germanLevel}</span>.
               </p>
 
               {/* Crucial Magic Visa sentence highlighted */}
-              <div className="p-3.5 rounded-lg bg-blue-50/70 border border-blue-200 text-slate-900 font-medium">
+              <div className="p-3 sm:p-4 rounded-lg bg-blue-50/70 border border-blue-200 text-slate-900 font-medium break-words [overflow-wrap:anywhere]">
                 <strong>Wichtig:</strong> Sie müssen als Arbeitgeber keine Visumsunterstützung übernehmen. Dank des Fachkräfteeinwanderungsgesetzes kann ich das gesamte Visumverfahren eigenständig durchführen.
               </div>
 
-              <p>
+              <p className="break-words [overflow-wrap:anywhere]">
                 Gerne überzeuge ich Sie in einem persönlichen Gespräch. Ich freue mich auf Ihre Rückmeldung.
               </p>
             </div>
@@ -363,7 +363,7 @@ ${formData.fullName}`;
             {/* Sign off */}
             <div className="mt-6 text-xs sm:text-sm text-slate-800">
               <div>Mit freundlichen Grüßen</div>
-              <div className="mt-6 font-bold text-slate-900">{formData.fullName}</div>
+              <div className="mt-6 font-bold text-slate-900 break-words">{formData.fullName}</div>
             </div>
 
           </div>

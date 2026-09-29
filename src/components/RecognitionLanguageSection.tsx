@@ -11,6 +11,7 @@ import {
   ArrowRight,
   Award
 } from 'lucide-react';
+import { VisaBridgeIllustration } from './illustrations/VisaBridgeIllustration';
 
 export const RecognitionLanguageSection: React.FC = () => {
   const [copiedGerman, setCopiedGerman] = useState(false);
@@ -205,8 +206,13 @@ export const RecognitionLanguageSection: React.FC = () => {
               </div>
             </div>
 
+            {/* Direct Employee-Employer Bridge Diagram */}
+            <div className="mt-8 w-full">
+              <VisaBridgeIllustration />
+            </div>
+
             {/* The Magic Sentences Box */}
-            <div className="mt-8 bg-slate-950/80 border border-slate-700 rounded-2xl p-5 sm:p-7">
+            <div className="mt-8 bg-slate-950/80 border border-slate-700 rounded-2xl p-4 sm:p-7 w-full overflow-hidden">
               <div className="flex items-center justify-between gap-2 mb-3">
                 <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
                   📌 Başvurularda Mutlaka Eklenmesi Gereken Sihirli Cümle:
@@ -217,21 +223,21 @@ export const RecognitionLanguageSection: React.FC = () => {
               </div>
 
               {/* German Text Box */}
-              <div className="bg-slate-900 p-4 sm:p-5 rounded-xl border border-slate-700/80 relative">
+              <div className="bg-slate-900 p-4 sm:p-5 rounded-xl border border-slate-700/80 relative w-full overflow-hidden">
                 <div className="text-xs font-mono text-blue-300 uppercase mb-2">
                   Almanca Versiyon (Motivasyon Mektubuna Ekleyin):
                 </div>
-                <p className="text-sm sm:text-base font-serif italic text-white leading-relaxed select-all">
+                <p className="text-sm sm:text-base font-serif italic text-white leading-relaxed select-all break-words [overflow-wrap:anywhere]">
                   “{germanDeclaration}”
                 </p>
 
                 <div className="mt-4 flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-slate-800">
-                  <span className="text-xs text-slate-400">
+                  <span className="text-xs text-slate-400 break-words">
                     Fachkräfteeinwanderungsgesetz resmi maddesi
                   </span>
                   <button
                     onClick={() => handleCopy(germanDeclaration, 'de')}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-all cursor-pointer shadow-sm"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-all cursor-pointer shadow-sm whitespace-nowrap"
                   >
                     {copiedGerman ? (
                       <>
@@ -249,17 +255,17 @@ export const RecognitionLanguageSection: React.FC = () => {
               </div>
 
               {/* Turkish Meaning Box */}
-              <div className="mt-4 p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-xs sm:text-sm text-slate-300">
+              <div className="mt-4 p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-xs sm:text-sm text-slate-300 w-full overflow-hidden">
                 <div className="text-xs font-semibold text-slate-400 mb-1">
                   Türkçe Açıklaması:
                 </div>
-                <p className="italic text-slate-300">
+                <p className="italic text-slate-300 break-words [overflow-wrap:anywhere]">
                   “{turkishDeclaration}”
                 </p>
                 <div className="mt-3 text-right">
                   <button
                     onClick={() => handleCopy(turkishDeclaration, 'tr')}
-                    className="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-white transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-white transition-colors cursor-pointer whitespace-nowrap"
                   >
                     {copiedTurkish ? <Check className="w-3 h-3 text-emerald-400" /> : <Copy className="w-3 h-3" />}
                     <span>{copiedTurkish ? 'Türkçe Kopyalandı' : 'Türkçe Metni Kopyala'}</span>

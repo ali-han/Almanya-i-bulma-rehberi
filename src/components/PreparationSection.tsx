@@ -11,6 +11,7 @@ import {
   Sparkles,
   Info
 } from 'lucide-react';
+import { DocumentsIllustration } from './illustrations/DocumentsIllustration';
 
 export const PreparationSection: React.FC = () => {
   // Interactive Self-Assessment Questions
@@ -188,6 +189,38 @@ export const PreparationSection: React.FC = () => {
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 text-xs font-semibold border border-emerald-200">
               <span>Hazır Evrak:</span>
               <span className="text-emerald-700 font-bold">{docsCompletedCount} / {basicDocs.length}</span>
+            </div>
+          </div>
+
+          {/* Large SVG Illustration Banner for Documents */}
+          <div className="mt-6 mb-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center bg-slate-50/70 border border-slate-200/80 rounded-3xl p-6 sm:p-8">
+            <div className="lg:col-span-6">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-2.5 py-1 rounded">
+                Standart Dosya Anatomisi
+              </span>
+              <h4 className="text-xl font-extrabold text-slate-900 mt-2">
+                Alman Başvuru Masası (Der Schreibtisch)
+              </h4>
+              <p className="text-sm text-slate-600 mt-2 leading-relaxed">
+                Almanya'daki işverenler, başvurunuzu incelerken <strong>1-2 sayfalık sade bir CV</strong>, noter/apostil onaylı <strong>diploma çevirisi</strong> ve resmi bir <strong>dil belgesini</strong> masasında derli toplu görmek ister.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2 text-xs">
+                <span className="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-slate-700 font-medium">
+                  ✓ Fotoğraflı & Kronolojik CV
+                </span>
+                <span className="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-slate-700 font-medium">
+                  ✓ Beglaubigte Übersetzung (Yeminli Çeviri)
+                </span>
+                <span className="px-2.5 py-1 rounded-md bg-white border border-slate-200 text-slate-700 font-medium">
+                  ✓ Goethe / Telc / ÖSD Belgesi
+                </span>
+              </div>
+            </div>
+
+            <div className="lg:col-span-6 flex justify-center">
+              <div className="w-full max-w-md">
+                <DocumentsIllustration className="hover:scale-[1.01] transition-transform duration-300" />
+              </div>
             </div>
           </div>
 

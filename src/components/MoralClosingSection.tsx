@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heart, Sparkles, Compass, CheckCircle2, ShieldCheck, ArrowRight } from 'lucide-react';
+import { CareerSuccessIllustration } from './illustrations/CareerSuccessIllustration';
 
 interface MoralClosingSectionProps {
   onScrollTo: (id: string) => void;
@@ -29,6 +30,11 @@ export const MoralClosingSection: React.FC<MoralClosingSectionProps> = ({ onScro
         <p className="mt-6 text-lg sm:text-xl text-slate-600 font-medium leading-relaxed max-w-2xl mx-auto">
           “Senin yük olmadığını, vize sürecini bağımsız yürütebildiğini anlayan Alman işverenler, seni takımına dahil etmekten mutluluk duyacak.”
         </p>
+
+        {/* Large SVG Illustration: Career Horizon in Germany */}
+        <div className="mt-10 max-w-3xl mx-auto rounded-3xl overflow-hidden border border-slate-200 shadow-sm">
+          <CareerSuccessIllustration className="hover:scale-[1.008] transition-transform duration-300" />
+        </div>
 
         {/* Summary Card */}
         <div className="mt-10 p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200 text-left">

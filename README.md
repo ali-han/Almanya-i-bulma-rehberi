@@ -108,8 +108,8 @@ Yeni **Nitelikli Göç Yasası (*Fachkräfteeinwanderungsgesetz*)** uyarınca ad
 Alman formatında hazırlanmış, doğrudan kopyalayıp kişisel bilgilerinizle doldurabileceğiniz motivasyon mektubu taslağı:
 
 ```text
-Ali Yılmaz
-Istanbul, Türkei – +90 532 000 00 00 – ali.yilmaz@email.com
+Ali Han
+Istanbul, Türkei – +90 532 000 00 00 – ali.han@email.com
 
 29.09.2026
 
@@ -133,7 +133,7 @@ Gerne überzeuge ich Sie in einem persönlichen Vorstellungsgespräch von meiner
 
 Mit freundlichen Grüßen
 
-Ali Yılmaz
+Ali Han
 ```
 
 ---

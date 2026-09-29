@@ -181,8 +181,61 @@ export const Footer: React.FC<FooterProps> = ({ onScrollTo }) => {
               <span>Gönülden Bir Teşekkür</span>
             </div>
             <p className="text-sm text-slate-300 leading-relaxed">
-              Bu rehberi; aracı firmalara binlerce Euro kaptırmadan, yalnızca kendi emeği, disiplini ve azmiyle Almanya'da yeni bir gelecek inşa etmeye cesaret eden herkes için hazırladık. Zaman ayırıp okuduğunuz, umudunuzu koruduğunuz ve bu yolda ilk adımı attığınız için yürekten teşekkür ederiz. Yolunuz açık olsun!
+              Bu rehberi; aracı firmalara binlerce Euro kaptırmadan, yalnızca kendi emeği, disiplini ve azmiyle Almanya'da yeni bir gelecek inşa etmeye cesaret eden herkes için hazırladım. Zaman ayırıp okuduğunuz, umudunuzu koruduğunuz ve bu yolda ilk adımı attığınız için yürekten teşekkür ederim. Yolunuz açık olsun!
             </p>
+
+            {/* İsim ve Janti Sembolik İmza */}
+            <div className="mt-4 flex flex-wrap items-center justify-between sm:justify-start gap-4">
+              <div>
+                <div className="text-sm font-extrabold text-white tracking-tight">Ali Han</div>
+                <div className="text-[11px] text-slate-400 font-medium">Rehberin Derleyicisi</div>
+              </div>
+
+              {/* Janti & Net Okunabilir Sembolik İmza */}
+              <div 
+                className="relative inline-flex flex-col items-start pl-2 select-none group"
+                title="Ali Han - Resmi İmza"
+              >
+                <div className="flex items-center">
+                  <span 
+                    className="text-2xl sm:text-3xl text-amber-400 font-normal tracking-wide drop-shadow-[0_2px_12px_rgba(251,191,36,0.35)] transition-transform duration-200 group-hover:scale-[1.03]"
+                    style={{ 
+                      fontFamily: "'Great Vibes', 'Caveat', 'Brush Script MT', cursive",
+                      transform: 'rotate(-2deg)',
+                      display: 'inline-block'
+                    }}
+                  >
+                    Ali Han
+                  </span>
+                </div>
+
+                {/* Dolma Kalem İmzası Vurgu Çizgisi (Fountain Pen Underline Flourish) */}
+                <svg 
+                  viewBox="0 0 160 20" 
+                  fill="none" 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  className="w-28 sm:w-32 h-3.5 -mt-1 text-amber-400 opacity-90 group-hover:opacity-100 transition-opacity"
+                  aria-hidden="true"
+                >
+                  <defs>
+                    <linearGradient id="sigFlourishGrad" x1="0" y1="0" x2="160" y2="0" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#f59e0b" />
+                      <stop offset="0.6" stopColor="#fbbf24" />
+                      <stop offset="0.95" stopColor="#fef08a" />
+                      <stop offset="1" stopColor="#fbbf24" />
+                    </linearGradient>
+                  </defs>
+                  
+                  {/* S-curve dynamic stroke that thickens in middle and tapers at the end */}
+                  <path 
+                    d="M 4 8 C 35 6, 85 10, 138 4 C 148 2.8, 140 7, 120 10 C 95 13.5, 60 12, 30 11" 
+                    fill="url(#sigFlourishGrad)" 
+                  />
+                  {/* Stylistic fountain pen dot at signature end */}
+                  <circle cx="148" cy="4" r="1.6" fill="#fbbf24" />
+                </svg>
+              </div>
+            </div>
           </div>
 
           {/* Developer Card: Ali Han */}

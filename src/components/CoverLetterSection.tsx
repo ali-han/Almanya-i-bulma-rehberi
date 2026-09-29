@@ -15,8 +15,8 @@ import {
 export const CoverLetterSection: React.FC = () => {
   // Customizable Form State
   const [formData, setFormData] = useState({
-    fullName: 'Ali Yılmaz',
-    contactInfo: 'Istanbul, Türkei – +90 532 000 00 00 – ali.yilmaz@email.com',
+    fullName: 'Ali Han',
+    contactInfo: 'Istanbul, Türkei – +90 532 000 00 00 – ali.han@email.com',
     date: new Date().toLocaleDateString('de-DE'),
     companyName: 'Muster GmbH & Co. KG',
     department: 'Personalabteilung',
